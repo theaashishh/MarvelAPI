@@ -52,15 +52,15 @@ async function modal_onClick(id) {
             console.log(values)
 
             api_data += `
-            <div id="${values.id}">
-                <p id="close-btn" onclick="close_btn()"><img src="../images/cancle-icon.svg" alt="cancle.svg"></p>
-                <h1>${values.id}</h1>
-                <ul>
-                ${values.comics.items.map((value)=> {
-                    
-                    `<li>${value.name}</li>`
-                })}
-                </ul>
+
+            <p id="close-btn" onclick="close_btn()"><img src="../images/cancle-icon.svg" alt="cancle.svg"></p>
+            <div id="${values.id}" class="data-grid">
+                <h1>${values.name}</h1>
+                <p>${values.description}</p>
+                <img src="${values.thumbnail.path}/${IMAGE_SIZE}.${values.thumbnail.extension}" alt="${values.name}" class=" cardimg">
+                <ul class="comic-names">${values.comics.items.map((value)=> {
+                    return `<li>${value.name}</li>`
+                  }).join('')}</ul>
             </div>
 
             `

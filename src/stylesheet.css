@@ -152,9 +152,15 @@ body {
     transform: scale(1.04);
 }
 
-#search-Img{
+#search-Img {
     padding: 50px 0px;
-}   
+}
+
+.comic-names li {
+    padding: 4px 0px;
+    font-size: 0.8rem;
+    list-style-type: none;
+}
 
 /* scroll bar css */
 
@@ -203,7 +209,7 @@ body {
 
 #close-btn img {
     position: fixed;
-    top:7%; 
+    top: 7%;
     right: 6%;
     width: 20px;
     border-radius: 200px;
@@ -220,7 +226,7 @@ body {
     align-items: center;
     justify-content: center;
     position: none;
-    top: 3%;    
+    top: 3%;
     border-radius: 50px;
     height: 94vh;
     width: 94vw;
@@ -246,6 +252,7 @@ body {
     border: 1px solid rgb(255, 255, 255);
     border-radius: 14px;
 }
+
 
 
 @media screen and (max-width:800px) {
@@ -278,11 +285,11 @@ body {
 
 @media screen and (max-width:520px) {
     .nav-item--img {
-        width: 300px;   
+        width: 300px;
     }
 
-    .searchbar-input{
-        width:360px;
+    .searchbar-input {
+        width: 360px;
     }
 }
 
