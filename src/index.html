@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>Marvel</title>
+  </head>
+  <body>
+    <!-- header  -->
+    <nav>
+      <div class="navbar">
+        <img
+          class="nav-item--img"
+          src="../images/Marvel_Logo.svg.png"
+          alt="Marvel_Logo"
+        />
+      </div>
+    </nav>
+
+    <!-- search bar -->
+    <from class="searchbar" spellcheck="true">
+      <input
+        class="searchbar-input"
+        id="comic-Inp"
+        type="text"
+        placeholder="Enter Favourite Character "
+        spellcheck="true"
+      />
+      <button class="searchbar-button" id="search-Btn" onclick="handelClick()">
+        Search
+      </button>
+    </from>
+
+    <!-- main content -->
+
+    <!-- <main class="api-items">
+      <div class="card1 cards">
+        <img src="../images/captain-america.jpg" alt="captain-america" class="cardimg1 cardimg">
+        <h6>Captain America</h6>
+      </img>
+      </div>
+      <div class="card2 cards">
+        <img src="../images/captian-marvel.jpg" alt="" class="cardimg2 cardimg">
+          <h6>Captain Marvel</h6>
+        </img>
+      </div>
+      <div class="card3 cards">
+        <img src="../images/endgame.JPEG" alt="" class="cardimg3 cardimg">
+          <h6>Avengers ENDGAME</h6>
+        </img>
+      </div>
+      <div class="card4 cards" id="">
+        <img src="../images/thor-thefallen.jpg" alt="" class="cardimg4 cardimg">
+          <h6>Avengers The Fallen</h6>
+        </img>
+      </div>
+    </main> -->
+    
+    <div id="what-You-have-search"></div>
+    <div id="search-Img" class="api-items"></div>
+
+    <div id="marvel_data" class="api-items"></div>
+
+
+
+    <!-- modal  -->
+
+    <div id="modal">
+
+    </div>
+
+    <!-- footer -->
+    <script src="./app.js"></script>
+    <script src="./searchbar.js"></script>
+  </body>
+</html>
