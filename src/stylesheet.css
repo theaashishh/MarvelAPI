@@ -219,20 +219,67 @@ body {
     transition: all 50ms ease-in;
 }
 
+/* below modal grid css */
+
+.data-grid {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 1.5rem;
+    margin: auto 0px;
+}
+
+.title-grid-col-span {
+    font-size: 4rem;
+    grid-column: span 3;
+    font-weight: 300;
+    margin: 0px 0px 100px 0px;
+}
+
+.descp-comic {
+    font-size: 1rem;
+    grid-column: span 2;
+    /* margin: 0px 80px; */
+}
+
+.desc {
+    text-align: left;
+    padding: 4px 0px 40px 0px;
+    font-weight: 400;
+}
+
+.comic-list {
+    text-align: left;
+    
+}
+
+.category{
+    text-align: left;
+    /* margin: 6px 0px ; */
+    font-weight: 700;
+}
+
+
+.modal-img {
+    border-radius: 0px !important;
+}
+
 
 #modal {
-    /* opacity: 0; */
     display: none;
-    align-items: center;
     justify-content: center;
-    position: none;
-    top: 3%;
-    border-radius: 50px;
-    height: 94vh;
-    width: 94vw;
+    position: none  ;
+    top: 1%;
+    height: 98vh;
+    width: 98vw;
     background-color: #ffffff;
     transition: all 200ms ease-in;
+    border-radius:10px ;
 }
+
+/* above modal grid css */
+
 
 .search-history {
     text-align: center;
@@ -257,7 +304,33 @@ body {
 
 @media screen and (max-width:800px) {
 
+    /* .data-grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0px ;
+    } */
 
+    .title-grid-col-span{
+        font-size: 3rem;
+    }
+
+    .modal-img {
+        border-radius: 0px !important;
+        padding: 0px 0px 0px 10px ;
+    }
+
+    .comic-list {
+        text-align: start;
+        padding: 0px 20px;
+    }
+
+    .category{
+        text-align: left;
+        margin: 4px 0px ;
+    }
+    
 
     .searchbar {
         display: flex;

@@ -24,6 +24,8 @@ fetch(url).then((data) => {
            
               <button id="${values.id}" class="btns" onclick="modal_onClick(${values.id})" title="${values.name}">${values.name}</button>
             </img>
+        
+
         </div>
           `
     })
@@ -55,12 +57,16 @@ async function modal_onClick(id) {
 
             <p id="close-btn" onclick="close_btn()"><img src="../images/cancle-icon.svg" alt="cancle.svg"></p>
             <div id="${values.id}" class="data-grid">
-                <h1>${values.name}</h1>
-                <p>${values.description}</p>
-                <img src="${values.thumbnail.path}/${IMAGE_SIZE}.${values.thumbnail.extension}" alt="${values.name}" class=" cardimg">
-                <ul class="comic-names">${values.comics.items.map((value)=> {
+                <h1 class="title-grid-col-span">${values.name}</h1>
+                <img src="${values.thumbnail.path}/${IMAGE_SIZE}.${values.thumbnail.extension}" alt="${values.name}" class=" cardimg modal-img">
+                <div class="descp-comic">
+                <h4 class="category">Description : </h4>
+                <p class="desc">${values.description}</p>
+                <h4 class="category">Comics : </h4>
+                <ul class="comic-names comic-list">${values.comics.items.map((value)=> {
                     return `<li>${value.name}</li>`
                   }).join('')}</ul>
+                  </div>
             </div>
 
             `
