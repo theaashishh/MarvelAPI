@@ -14,18 +14,14 @@ fetch(url).then((data) => {
     return data.json()
 }).then((ObjectData) => {
     // console.log(ObjectData.data.results)
-
     const IMAGE_SIZE = 'portrait_fantastic'
     let api_data = "";
     ObjectData.data.results.map((values) => {
         api_data += `
         <div class="card1 cards" id="${values.id}">
-            <img src="${values.thumbnail.path}/${IMAGE_SIZE}.${values.thumbnail.extension}" alt="${values.name}" class=" cardimg">
-           
-              <button id="${values.id}" class="btns" onclick="modal_onClick(${values.id})" title="${values.name}">${values.name}</button>
-            </img>
+            <img src="${values.thumbnail.path}/${IMAGE_SIZE}.${values.thumbnail.extension}" alt="${values.name}" class=" cardimg"></img>
+            <button id="${values.id}" class="btns" onclick="modal_onClick(${values.id})" title="${values.name}">${values.name}</button>
         
-
         </div>
           `
     })
@@ -48,6 +44,7 @@ async function modal_onClick(id) {
     try {
         let response = await fetch(url)
         let data = await response.json();
+        
 
         let api_data = ""
         data.data.results.map((values) => {
@@ -70,8 +67,10 @@ async function modal_onClick(id) {
             </div>
 
             `
-            document.getElementById('modal').innerHTML = api_data
+            document.getElementById('modal').innerHTML = api_data   
+
         })
+
 
         // return data.data.results
     } catch (err) {
@@ -92,6 +91,8 @@ function close_btn() {
         return
     }
 }
+
+console.log(document.getElementById("datata"))
 
 
 
