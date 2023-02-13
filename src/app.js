@@ -53,7 +53,7 @@ async function modal_onClick(id) {
             api_data += `
 
             <p id="close-btn" onclick="close_btn()"><img src="../images/cancle-icon.svg" alt="cancle.svg"></p>
-            <div id="${values.id}" class="data-grid">
+            <div id="${values.id}" class="data-grid" onload="loader()">
                 <h1 class="title-grid-col-span">${values.name}</h1>
                 <img src="${values.thumbnail.path}/${IMAGE_SIZE}.${values.thumbnail.extension}" alt="${values.name}" class=" cardimg modal-img">
                 <div class="descp-comic">
@@ -92,8 +92,18 @@ function close_btn() {
     }
 }
 
-console.log(document.getElementById("datata"))
+ var loading
 
+
+const loader = () =>{
+    loading  = setTimeout(show_Data, 2500)
+}
+
+function show_Data(){
+    document.getElementById("loader").style.display="none"
+    document.getElementById("loader").style.position="none"
+
+}
 
 
 
