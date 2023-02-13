@@ -15,6 +15,9 @@ const fetchheroes = async (value) => {
         data.data.results.map((values) => {
 
             api_data += `
+            <div id="loader">
+            <sapn class="letter">MARVEL</span>
+          </div>
             <div id="marvel-api" class="cards">
                  <img class="cardimg" src="${values.thumbnail.path}/${IMAGE_SIZE}.${values.thumbnail.extension}" alt="${values.name}" >
                  <button class="search_btn btns" onclick="search_Modal_Data(${values.id})" title="${values.name}">${values.name}</button>  

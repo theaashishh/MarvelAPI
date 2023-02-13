@@ -51,7 +51,6 @@ async function modal_onClick(id) {
             console.log(values)
 
             api_data += `
-
             <p id="close-btn" onclick="close_btn()"><img src="../images/cancle-icon.svg" alt="cancle.svg"></p>
             <div id="${values.id}" class="data-grid" onload="loader()">
                 <h1 class="title-grid-col-span">${values.name}</h1>
@@ -65,11 +64,11 @@ async function modal_onClick(id) {
                   }).join('')}</ul>
                   </div>
             </div>
-
             `
             document.getElementById('modal').innerHTML = api_data   
 
         })
+        
 
 
         // return data.data.results
@@ -79,6 +78,7 @@ async function modal_onClick(id) {
 
 
 }
+
 
 function close_btn() {
     let modal = document.getElementById("modal")
@@ -94,7 +94,6 @@ function close_btn() {
 
  var loading
 
-
 const loader = () =>{
     loading  = setTimeout(show_Data, 2500)
 }
@@ -104,16 +103,6 @@ function show_Data(){
     document.getElementById("loader").style.position="none"
 
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
